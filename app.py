@@ -110,10 +110,12 @@ with container:
                 S.append('True label: ' + label)
             return S
         # Thêm nội dung vào cột bên dưới
-        col1, col2 = st.tabs(["MobileNetV2","VGG16"])
+        col1, col2 = st.columns(2)
         with col1:
+            st.write("MobileNetV2")
             st.write(output(opencv_image,model1))
         with col2:
+            st.write("VGG16")
             st.write(output(opencv_image,model2))
             st.write("---------------------")
     
